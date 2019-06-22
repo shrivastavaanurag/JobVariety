@@ -5,7 +5,7 @@ import Logo from "../components/Logo";
 import LoginSignupForm from "../components/LoginSignupForm";
 import TextViewBold from "../components/customTextViews/TextViewBold";
 
-export default class Login extends Component {
+export default class SignUp extends Component {
 
     async componentDidMount() {
 
@@ -21,22 +21,22 @@ export default class Login extends Component {
                                     keyboardShouldPersistTaps='handled'>
                             <Logo/>
                             <TextViewBold FontColor={Globals.COLOR.LIGHTGRAY} FontSize={Globals.TEXT_SIZE.LARGE}
-                                          value={Globals.TEXT_VALUES.LOGIN} FontPaddingVertical={10}/>
-                            <LoginSignupForm fromScreen="Login"
-                                             buttonText="Login"
-                                             haveaccount="Don't have an account?"
-                                             signin=" Sign Up"
-                                             orSignin="-- Or sign in with --"/>
+                                          value="Sign up" FontPaddingVertical={10}/>
+                            <LoginSignupForm fromScreen="SignUp"
+                                             buttonText="Sign Up"
+                                             haveaccount="Already have an account?"
+                                             signin=" Sign In"
+                                             orSignin="-- Or sign up with --"/>
                         </ScrollView>
                     </KeyboardAvoidingView>
                     : <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingVertical: 10}}
                                   keyboardShouldPersistTaps='handled'>
                         <Logo/>
-                        <LoginSignupForm fromScreen="Login"
-                                         buttonText="Login"
-                                         haveaccount="Don't have an account?"
-                                         signin=" Sign Up"
-                                         orSignin="-- Or sign in with --"/>
+                        <LoginSignupForm fromScreen="SignUp"
+                                         buttonText="Sign Up"
+                                         haveaccount="Already have an account?"
+                                         signin=" Sign In"
+                                         orSignin="-- Or sign up with --"/>
                     </ScrollView>
                 }
 
