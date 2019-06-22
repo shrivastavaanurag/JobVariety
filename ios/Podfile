@@ -7,6 +7,8 @@ target 'JobVariety' do
 
   # Pods for JobVariety
 
+  # pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'JobVarietyTests' do
     inherit! :search_paths
     # Pods for testing

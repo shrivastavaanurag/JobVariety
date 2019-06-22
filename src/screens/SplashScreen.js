@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Image, View} from 'react-native';
-import applogo from '../images/app-logo.png';
-import {widthPercentageToDP} from '../utils/responsive';
+import {View} from 'react-native';
 import Globals from "../constants/Globals";
+import Logo from "../components/Logo";
 
 export default class SplashScreen extends Component {
     performTimeConsumingTask = async () => {
@@ -29,10 +28,7 @@ export default class SplashScreen extends Component {
     render() {
         return (
             <View style={styles.viewStyles}>
-                <Image
-                    style={styles.stretch}
-                    source={applogo}
-                />
+                <Logo/>
             </View>
         );
     }
@@ -46,8 +42,5 @@ const styles = {
         backgroundColor: Globals.COLOR.WHITE
     },
 
-    stretch: {
-        height: widthPercentageToDP(50),
-        width: widthPercentageToDP(50)
-    }
+
 };

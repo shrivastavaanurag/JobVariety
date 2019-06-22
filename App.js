@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet} from 'react-native';
-import SplashScreen from "./src/screens/SplashScreen";
+import Login from "./src/screens/Login";
 
 
 type Props = {};
@@ -20,7 +20,7 @@ export default class App extends Component<Props> {
       }*/
 
       return (
-          <SplashScreen/>
+          <Login/>
       );
   }
 }
