@@ -1,31 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import SplashScreen from "./src/screens/SplashScreen";
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 type Props = {};
 export default class App extends Component<Props> {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {isLoading: true}
+    }
+
+
   render() {
-    return (
-      <View style={styles.container}>
-          <Text style={styles.welcome}>Welcome to JobVariety App!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+
+      /*if (this.state.isLoading) {
+          return <SplashScreen/>;
+      }*/
+
+      return (
+          <SplashScreen/>
+      );
   }
 }
 
