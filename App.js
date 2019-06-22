@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet} from 'react-native';
-import Login from "./src/screens/Login";
+import SignUp from "./src/screens/SignUp";
 
 
 type Props = {};
@@ -20,7 +20,7 @@ export default class App extends Component<Props> {
       }*/
 
       return (
-          <Login/>
+          <SignUp/>
       );
   }
 }
