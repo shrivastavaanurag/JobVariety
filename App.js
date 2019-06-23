@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
-import SignUp from "./src/screens/SignUp";
+import {StyleSheet, YellowBox} from 'react-native';
+import JobDetails from "./src/screens/JobDetails";
 
 
 type Props = {};
@@ -8,8 +8,12 @@ export default class App extends Component<Props> {
 
     constructor(props) {
         super(props);
-
         this.state = {isLoading: true}
+    }
+
+    componentWillMount() {
+        console.disableYellowBox = true;
+        YellowBox.ignoreWarnings(['Class RCTCxxModule']);
     }
 
 
@@ -20,7 +24,7 @@ export default class App extends Component<Props> {
       }*/
 
       return (
-          <SignUp/>
+          <JobDetails/>
       );
   }
 }

@@ -21,7 +21,7 @@ export default class SplashScreen extends Component {
         const data = await this.performTimeConsumingTask();
 
         if (data !== null) {
-            // this.props.navigation.navigate('Login');
+            this.props.navigation.navigate('Login');
         }
     }
 

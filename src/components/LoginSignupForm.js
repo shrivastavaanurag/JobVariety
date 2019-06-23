@@ -41,6 +41,15 @@ export default class LoginSignupForm extends Component {
         console.log("LOGIN CLICKED");
         NetInfo.isConnected.fetch().done((isConnected) => {
             if (isConnected) {
+                if (this.props.fromScreen === 'SignUp') {
+                    if (this.state.checked) {
+                        alert('Signup');
+                    } else {
+                        alert('Please check privacy and policy');
+                    }
+                } else {
+                    alert('Login');
+                }
 
             } else {
                 this.notConnected();
@@ -61,12 +70,26 @@ export default class LoginSignupForm extends Component {
     };
 
     _forgotPasswordClicked = () => {
-
+        alert('FP clicked');
     };
 
     _DontHaveAccount = () => {
-
+        if (this.props.fromScreen === 'SignUp') {
+            alert('Already have account');
+        } else {
+            alert('DNT have account');
+        }
     };
+
+    _loginWithFacebook = () => {
+        alert('fbclicked');
+    };
+
+    _loginWithGoogle = () => {
+        alert('googlclicked');
+    };
+
+
 
     constructor(props) {
         super(props);
@@ -232,17 +255,25 @@ export default class LoginSignupForm extends Component {
                 </View>
 
                 <View style={{flexDirection: 'row', marginTop: 10}}>
-                    <Image source={fbIcon}
-                           style={styles.socialNetworkIcon}
-                    />
+                    <TouchableOpacity
+                        activeOpacity={0.7}
+                        onPress={this._loginWithFacebook}>
+                        <Image source={fbIcon}
+                               style={styles.socialNetworkIcon}
+                        />
+                    </TouchableOpacity>
                     <View style={{
                         borderWidth: 0.5,
                         borderColor: 'black',
                         margin: 10,
                     }}/>
-                    <Image source={googleIcon}
-                           style={styles.socialNetworkIcon}
-                    />
+                    <TouchableOpacity
+                        activeOpacity={0.7}
+                        onPress={this._loginWithGoogle}>
+                        <Image source={googleIcon}
+                               style={styles.socialNetworkIcon}
+                        />
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.donthaveaccount}>

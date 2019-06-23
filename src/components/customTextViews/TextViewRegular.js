@@ -12,8 +12,9 @@ export default class TextViewRegular extends Component {
             <Text numberOfLines={this.props.noOfLines}
                   style={
                       {
-                          fontFamily: 'Quicksand-Regular',
+                          fontFamily: 'Roboto-Regular',
                           flex: this.props.TextFlex,
+                          flexWrap: 'wrap',
                           fontSize: this.props.FontSize,
                           color: this.props.FontColor,
                           textAlignVertical: this.props.FontTextAlignVertical,

@@ -47,7 +47,7 @@ export default class SignUp extends Component {
 
 const styles = {
     container: {
-        flex: 1, paddingVertical: 30,
+        flex: 1, paddingVertical: 25,
         alignItems: 'center', justifyContent: 'center',
         backgroundColor: Globals.COLOR.WHITE
     }

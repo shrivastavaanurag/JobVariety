@@ -12,7 +12,7 @@ export default class TextViewMedium extends Component {
             <Text numberOfLines={this.props.noOfLines}
                   style={
                       {
-                          fontFamily: 'Quicksand-Medium',
+                          fontFamily: 'Roboto-Medium',
                           flex: this.props.TextFlex,
                           fontSize: this.props.FontSize,
                           color: this.props.FontColor,

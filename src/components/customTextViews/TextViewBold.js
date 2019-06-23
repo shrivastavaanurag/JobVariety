@@ -13,7 +13,7 @@ export default class TextViewBold extends Component {
                   style={
                       {
                           backgroundColor: this.props.BackGroundColor,
-                          fontFamily: 'Quicksand-Bold',
+                          fontFamily: 'Roboto-Bold',
                           flex: this.props.TextFlex,
                           fontSize: this.props.FontSize,
                           color: this.props.FontColor,
