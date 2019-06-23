@@ -12,7 +12,7 @@ import {
     View
 } from 'react-native';
 
-import {CheckBox} from 'react-native-elements'
+import CheckBox from 'react-native-check-box'
 import TextViewBold from "./customTextViews/TextViewBold";
 import TextViewMedium from "./customTextViews/TextViewMedium";
 import Globals from "../constants/Globals";
@@ -166,11 +166,26 @@ export default class LoginSignupForm extends Component {
 
                 {this.props.fromScreen === 'SignUp' ?
                     <View style={styles.forgotPassContainer}>
-                        <CheckBox
-                            center
-                            title='I agree with privacy and policy'
-                            checked={this.state.checked}
-                        />
+                        <TouchableOpacity
+                            style={{alignItems: 'flex-start', justifyContent: 'center'}}
+                            activeOpacity={0.7}
+                            onPress={this._forgotPasswordClicked}>
+                            <CheckBox
+                                style={{flex: 1}}
+                                onClick={() => {
+                                    this.setState({
+                                        checked: !this.state.checked
+                                    })
+                                }}
+                                isChecked={this.state.checked}
+                                rightTextStyle={{color: Globals.COLOR.DARKBLUE}}
+                                rightTextView={<TextViewRegular value="I agree with privacy and policy"
+                                                                FontColor={Globals.COLOR.LIGHTBLUE}/>}
+                                checkBoxColor={Globals.COLOR.THEME_COLOR_BLUE}
+                                checkedCheckBoxColor={Globals.COLOR.THEME_COLOR_BLUE}
+                            />
+                        </TouchableOpacity>
+
                     </View>
                     :
                     null
@@ -289,6 +304,7 @@ const styles = StyleSheet.create({
     forgotPassContainer: {
         width: widthPercentageToDP('80%'),
         marginTop: 10,
+        marginBottom: 10
     },
     forgotPassText: {
         textAlign: 'center',
