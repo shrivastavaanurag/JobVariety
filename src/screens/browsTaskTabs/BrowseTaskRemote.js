@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {FlatList, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, StyleSheet, View} from 'react-native';
 import CardView from 'react-native-cardview';
 
 import {heightPercentageToDP, widthPercentageToDP} from "../../utils/responsive";
@@ -24,8 +24,8 @@ export default class BrowseTaskRemote extends React.Component {
                     showsVerticalScrollIndicator={false}
                     renderItem={({item}) =>
 
-                        <TouchableOpacity
-                            onPress={this.itemClick.bind(this, item)}>
+                        // <TouchableOpacity
+                        // onPress={this.itemClick.bind(this, item)}>
                             <View style={styles.MainContainer}>
 
                                 <CardView
@@ -80,7 +80,7 @@ export default class BrowseTaskRemote extends React.Component {
 
                             </View>
 
-                        </TouchableOpacity>
+                        // </TouchableOpacity>
                     }
                     keyExtractor={item => item.id.toString()}
                 />
@@ -102,5 +102,9 @@ const styles = StyleSheet.create({
     image: {
         height: heightPercentageToDP(7),
         width: heightPercentageToDP(7), margin: 10
+    },
+    MainContainer: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
     },
 });
