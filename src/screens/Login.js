@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {KeyboardAvoidingView, Platform, ScrollView, View} from 'react-native';
 import Globals from "../constants/Globals";
 import Logo from "../components/Logo";
-import LoginSignupForm from "../components/LoginSignupForm";
+import LoginForm from "../components/LoginForm";
 import TextViewBold from "../components/customTextViews/TextViewBold";
 
 export default class Login extends Component {
@@ -21,22 +21,24 @@ export default class Login extends Component {
                                     keyboardShouldPersistTaps='handled'>
                             <Logo/>
                             <TextViewBold FontColor={Globals.COLOR.LIGHTGRAY} FontSize={Globals.TEXT_SIZE.LARGE}
-                                          value={Globals.TEXT_VALUES.LOGIN} FontPaddingVertical={10}/>
-                            <LoginSignupForm fromScreen="Login"
-                                             buttonText="Login"
-                                             haveaccount="Don't have an account?"
-                                             signin=" Sign Up"
-                                             orSignin="-- Or sign in with --"/>
+                                          value={Globals.TEXT_VALUES.LOGIN} FontPaddingVertical={5}/>
+                            <LoginForm fromScreen="Login"
+                                       buttonText="Login"
+                                       haveaccount="Don't have an account?"
+                                       signin=" Sign Up"
+                                       orSignin="-- Or sign in with --"/>
                         </ScrollView>
                     </KeyboardAvoidingView>
                     : <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingVertical: 10}}
                                   keyboardShouldPersistTaps='handled'>
                         <Logo/>
-                        <LoginSignupForm fromScreen="Login"
-                                         buttonText="Login"
-                                         haveaccount="Don't have an account?"
-                                         signin=" Sign Up"
-                                         orSignin="-- Or sign in with --"/>
+                        <TextViewBold FontColor={Globals.COLOR.LIGHTGRAY} FontSize={Globals.TEXT_SIZE.LARGE}
+                                      value={Globals.TEXT_VALUES.LOGIN} FontPaddingVertical={5}/>
+                        <LoginForm fromScreen="Login"
+                                   buttonText="Login"
+                                   haveaccount="Don't have an account?"
+                                   signin=" Sign Up"
+                                   orSignin="-- Or sign in with --"/>
                     </ScrollView>
                 }
 

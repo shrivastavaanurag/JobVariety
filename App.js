@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, YellowBox} from 'react-native';
-import JobDetails from "./src/screens/JobDetails";
+import {Platform, StyleSheet, YellowBox} from 'react-native';
+import SplashScreen from "react-native-splash-screen";
+import FluxRouter from "./src/navigator/FluxRouter";
 
 
 type Props = {};
@@ -16,6 +17,15 @@ export default class App extends Component<Props> {
         YellowBox.ignoreWarnings(['Class RCTCxxModule']);
     }
 
+    componentDidMount() {
+        if (Platform.OS === 'android') {
+            setTimeout(() => {
+                SplashScreen.hide();
+            }, 2000);
+        }
+    }
+
+
 
   render() {
 
@@ -23,9 +33,8 @@ export default class App extends Component<Props> {
           return <SplashScreen/>;
       }*/
 
-      return (
-          <JobDetails/>
-      );
+      return <FluxRouter/>;
+
   }
 }
 

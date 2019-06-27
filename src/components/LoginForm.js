@@ -12,7 +12,8 @@ import {
     View
 } from 'react-native';
 
-import CheckBox from 'react-native-check-box'
+
+import {Actions} from 'react-native-router-flux';
 import TextViewBold from "./customTextViews/TextViewBold";
 import TextViewMedium from "./customTextViews/TextViewMedium";
 import Globals from "../constants/Globals";
@@ -30,7 +31,7 @@ const _deviceType = Platform.select({
     android: 'Android',
 });
 
-export default class LoginSignupForm extends Component {
+export default class LoginForm extends Component {
 
 
     _loadInitialState = async () => {
@@ -41,15 +42,7 @@ export default class LoginSignupForm extends Component {
         console.log("LOGIN CLICKED");
         NetInfo.isConnected.fetch().done((isConnected) => {
             if (isConnected) {
-                if (this.props.fromScreen === 'SignUp') {
-                    if (this.state.checked) {
-                        alert('Signup');
-                    } else {
-                        alert('Please check privacy and policy');
-                    }
-                } else {
-                    alert('Login');
-                }
+                Actions.drawer();
 
             } else {
                 this.notConnected();
@@ -74,11 +67,7 @@ export default class LoginSignupForm extends Component {
     };
 
     _DontHaveAccount = () => {
-        if (this.props.fromScreen === 'SignUp') {
-            alert('Already have account');
-        } else {
-            alert('DNT have account');
-        }
+        Actions.register();
     };
 
     _loginWithFacebook = () => {
@@ -172,51 +161,9 @@ export default class LoginSignupForm extends Component {
                                ref={"txtPassword"}/>
                 </View>
 
-                {this.props.fromScreen === 'SignUp' ?
-                    <View style={styles.inputWrapper}>
-                        <TextInput style={styles.input}
-                                   placeholder="Confirm Password"
-                                   placeholderTextColor={Globals.COLOR.LIGHTGRAY}
-                                   secureTextEntry
-                                   autoCorrect={false}
-                                   underlineColorAndroid="transparent"
-                                   onChangeText={(password) => this.setState({password})}
-                                   ref={"txtPassword"}/>
-                    </View>
-                    :
-                    null
-                }
-
-                {this.props.fromScreen === 'SignUp' ?
-                    <View style={styles.forgotPassContainer}>
-                        <TouchableOpacity
-                            style={{alignItems: 'flex-start', justifyContent: 'center'}}
-                            activeOpacity={0.7}
-                            onPress={this._forgotPasswordClicked}>
-                            <CheckBox
-                                style={{flex: 1}}
-                                onClick={() => {
-                                    this.setState({
-                                        checked: !this.state.checked
-                                    })
-                                }}
-                                isChecked={this.state.checked}
-                                rightTextStyle={{color: Globals.COLOR.DARKBLUE}}
-                                rightTextView={<TextViewRegular value="I agree with privacy and policy"
-                                                                FontColor={Globals.COLOR.LIGHTBLUE}/>}
-                                checkBoxColor={Globals.COLOR.THEME_COLOR_BLUE}
-                                checkedCheckBoxColor={Globals.COLOR.THEME_COLOR_BLUE}
-                            />
-                        </TouchableOpacity>
-
-                    </View>
-                    :
-                    null
-                }
-
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity
-                        style={{flex: 1, width: widthPercentageToDP('78%'), alignItems: 'center'}}
+                        style={{flex: 1, width: widthPercentageToDP('80%'), alignItems: 'center'}}
                         activeOpacity={0.7}
                         onPress={this.loginClicked}>
                         <TextViewBold
@@ -228,33 +175,29 @@ export default class LoginSignupForm extends Component {
 
                 </View>
 
-                {this.props.fromScreen === 'Login' ?
-                    <View style={styles.forgotPassContainer}>
-                        <TouchableOpacity
-                            style={{alignItems: 'flex-end', justifyContent: 'center'}}
-                            activeOpacity={0.7}
-                            onPress={this._forgotPasswordClicked}>
-                            <TextViewRegular
-                                value="Forgot password?"
-                                FontSize={Globals.TEXT_SIZE.SMALL_2} FontColor={Globals.COLOR.DARKBLUE}
-                                FontPaddingVertical={10}
-                                FontPaddingHorizontal={10}
-                                FontTextAlign={'right'}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                    :
-                    null
-                }
+                <View style={styles.forgotPassContainer}>
+                    <TouchableOpacity
+                        style={{alignItems: 'flex-end', justifyContent: 'center'}}
+                        activeOpacity={0.7}
+                        onPress={this._forgotPasswordClicked}>
+                        <TextViewRegular
+                            value="Forgot password?"
+                            FontSize={Globals.TEXT_SIZE.SMALL_2} FontColor={Globals.COLOR.DARKBLUE}
+                            FontPaddingVertical={10}
+                            FontPaddingHorizontal={10}
+                            FontTextAlign={'right'}
+                        />
+                    </TouchableOpacity>
+                </View>
 
 
                 <View style={styles.orStyle}>
                     <TextViewRegular value={this.props.orSignin} FontSize={Globals.TEXT_SIZE.MEDIUM}
-                                     FontColor={Globals.COLOR.DARKBLUE} FontTextAlign="center"
-                                     FontPaddingHorizontal={0}/>
+                                     FontColor={Globals.COLOR.DARKBLUE} FontTextAlign="center" FontPaddingVertical={10}
+                                     FontPaddingHorizontal={5}/>
                 </View>
 
-                <View style={{flexDirection: 'row', marginTop: 10}}>
+                <View style={{flexDirection: 'row', marginTop: heightPercentageToDP(0.8),}}>
                     <TouchableOpacity
                         activeOpacity={0.7}
                         onPress={this._loginWithFacebook}>
@@ -311,13 +254,13 @@ const styles = StyleSheet.create({
     inputWrapper: {
         alignItems: 'center',
         flexDirection: 'row',
-        marginVertical: 10,
+        marginVertical: heightPercentageToDP(0.8),
         borderBottomColor: Globals.COLOR.LIGHTGRAY,
         borderBottomWidth: 1,
         paddingHorizontal: 10,
     },
     input: {
-        flex: 1, paddingVertical: 10, fontSize: Globals.TEXT_SIZE.MEDIUM
+        flex: 1, paddingVertical: heightPercentageToDP(0.8), fontSize: Globals.TEXT_SIZE.MEDIUM
     },
 
     buttonContainer: {
@@ -325,7 +268,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: Globals.COLOR.THEME_COLOR_BLUE,
         width: widthPercentageToDP('80%'),
-        marginTop: 10,
+        marginTop: heightPercentageToDP(0.8),
         borderColor: "#f3f3f3",
         borderWidth: 1,
         borderRadius: 30,
@@ -334,8 +277,8 @@ const styles = StyleSheet.create({
 
     forgotPassContainer: {
         width: widthPercentageToDP('80%'),
-        marginTop: 10,
-        marginBottom: 10
+        marginTop: heightPercentageToDP(0.8),
+        marginBottom: heightPercentageToDP(0.8),
     },
     forgotPassText: {
         textAlign: 'center',
@@ -343,11 +286,14 @@ const styles = StyleSheet.create({
         fontSize: Globals.TEXT_SIZE.SMALL
     },
     donthaveaccount: {
-        flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', marginTop: 30
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        marginTop: heightPercentageToDP(2.4),
     },
 
     orStyle: {
-        flexDirection: 'row', height: heightPercentageToDP(5)
+        flexDirection: 'row',
     },
 
     socialNetworkIcon: {

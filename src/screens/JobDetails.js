@@ -189,23 +189,17 @@ export default class JobDetails extends Component {
                                      value="lorem ipsum dollor sit dude man wth have fun in the city make it simple as possible no worries aapki najro ne samjha chutiya etc etc, this is test text only no sapmple hdsk hutiye"
                                      FontColor={Globals.COLOR.GREY} FontSize={Globals.TEXT_SIZE.SMALL}/>
 
-                    <View>
-                        <View style={{flex: 1, height: 1, width: widthPercentageToDP(100), marginBottom: 15}}>
-                            <Text style={{
-                                alignItems: 'center', margin: 10,
-                                justifyContent: 'center', backgroundColor: Globals.COLOR.GREY
-                            }}>-</Text>
-                        </View>
-
-                        <TextViewMedium FontPaddingHorizontal={15} FontTextAlign="left" FontPaddingVertical={5}
-                                        value="Ask Questions" FontColor={Globals.COLOR.DARKBLUE}
-                                        FontSize={Globals.TEXT_SIZE.LARGE_2}/>
-
-                        <View style={{marginBottom: 20, flex: 1, height: 1, width: widthPercentageToDP(100)}}>
-                            <Text style={{
-                                alignItems: 'center', margin: 10,
-                                justifyContent: 'center', backgroundColor: Globals.COLOR.GREY
-                            }}>-</Text>
+                    <View style={{justifyContent: 'center', alignItems: 'center', marginTop: 10}}>
+                        <View style={{
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: widthPercentageToDP(85),
+                            borderTopWidth: 1,
+                            borderTopColor: Globals.COLOR.LIGHTGRAY
+                        }}>
+                            <TextViewMedium FontPaddingHorizontal={15} FontTextAlign="left" FontPaddingVertical={5}
+                                            value="Ask Questions" FontColor={Globals.COLOR.DARKBLUE}
+                                            FontSize={Globals.TEXT_SIZE.LARGE_2}/>
                         </View>
                     </View>
 
