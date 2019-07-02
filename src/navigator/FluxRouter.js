@@ -8,6 +8,12 @@ import JobDetails from "../screens/JobDetails";
 import NavigationDrawer from "../components/NavigationDrawer";
 import MenuIcon from '../images/menuIcon.png';
 import {widthPercentageToDP} from "../utils/responsive";
+import MakeOffer1 from "../screens/makeOffers/MakeOffer1";
+import MakeOffer2 from "../screens/makeOffers/MakeOffer2";
+import PreviewOffer from "../screens/makeOffers/PreviewOffer";
+import Help from "../screens/Help";
+import AboutUs from "../screens/AboutUs";
+import Settings from "../screens/Settings";
 
 var alerts = require('../constants/alertFunction');
 
@@ -97,7 +103,14 @@ export default class FluxRouter extends Component<Props> {
 
                             <Scene initial key="browsTask" title="Browse Task" component={BrowsTask} hideNavBar/>
                             <Scene key="jobDetails" title="Job Details" component={JobDetails} hideNavBar/>
+                            <Scene key="makeOffer1" title="Make Your Offers" component={MakeOffer1} hideNavBar/>
+                            <Scene key="makeOffer2" title="Make Your Offers" component={MakeOffer2}/>
+                            <Scene key="previewOffer" title="Preview Offer" component={PreviewOffer}/>
+                            <Scene key="help" title="Help" component={Help}/>
+                            <Scene key="aboutus" title="About Us" component={AboutUs}/>
+                            <Scene key="settings" title="Settings" component={Settings}/>
                         </Scene>
+
                     </Drawer>
                 </Stack>
 

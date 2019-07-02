@@ -17,7 +17,7 @@ export default class BackGround extends React.Component {
         if (Platform.OS === 'ios') {
             this.state = {statusbar: true}
         } else {
-            this.state = {statusbar: false}
+            this.state = {statusbar: true}
         }
     }
 
@@ -28,8 +28,8 @@ export default class BackGround extends React.Component {
             <View style={styles.container}>
 
                 <MyStatusBar
-                    backgroundColor={Platform.OS === 'ios' ? Globals.COLOR.WHITE : Globals.COLOR.THEME_COLOR_BLUE}
-                    barStyle="light-content"/>
+                    backgroundColor={Platform.OS === 'ios' ? Globals.COLOR.WHITE : Globals.COLOR.WHITE}
+                    barStyle="dark-content"/>
 
                 <View style={styles.content}>
                     {this.props.children}

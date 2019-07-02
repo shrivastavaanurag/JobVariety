@@ -16,7 +16,7 @@ import {
 
 import Globals from "../constants/Globals";
 
-import {Actions} from 'react-native-router-flux';
+import {ActionConst, Actions} from 'react-native-router-flux';
 
 import {heightPercentageToDP, widthPercentageToDP} from "../utils/responsive";
 
@@ -54,10 +54,23 @@ export default class NavigationDrawer extends Component {
     goToScreen = async (item) => {
         switch (item.name) {
             case 'Browse Task':
+                Actions.browsTask({type: ActionConst.REPLACE});
                 Actions.drawerClose();
                 break;
             case 'Logout':
                 Actions.popTo('login');
+                break;
+            case 'Help':
+                Actions.help({type: ActionConst.REPLACE});
+                Actions.drawerClose();
+                break;
+            case 'About Us':
+                Actions.aboutus({type: ActionConst.REPLACE});
+                Actions.drawerClose();
+                break;
+            case 'Settings':
+                Actions.settings({type: ActionConst.REPLACE});
+                Actions.drawerClose();
                 break;
         }
     };
