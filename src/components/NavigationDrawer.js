@@ -72,6 +72,10 @@ export default class NavigationDrawer extends Component {
                 Actions.settings({type: ActionConst.REPLACE});
                 Actions.drawerClose();
                 break;
+            case 'Post Task':
+                Actions.postTask1({type: ActionConst.REPLACE});
+                Actions.drawerClose();
+                break;
         }
     };
 

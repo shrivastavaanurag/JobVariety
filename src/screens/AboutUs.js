@@ -2,7 +2,6 @@ import * as React from 'react';
 import {Platform, ScrollView, StyleSheet, View} from 'react-native';
 import ActionBar from 'react-native-action-bar';
 import {heightPercentageToDP, widthPercentageToDP} from "../utils/responsive";
-import TextViewRegular from "../components/customTextViews/TextViewRegular";
 import Globals from "../constants/Globals";
 import BackGround from "../components/BackGround";
 import {Actions} from "react-native-router-flux";
@@ -10,6 +9,8 @@ import DetectDeviceService from "../utils/DetectDeviceService";
 import MenuIcon from '../images/menuIcon.png';
 import TextViewBold from "../components/customTextViews/TextViewBold";
 import Logo from "../components/Logo";
+
+import {Paragraph} from 'react-native-paper';
 
 export default class AboutUs extends React.Component {
 
@@ -44,7 +45,75 @@ export default class AboutUs extends React.Component {
                                           FontColor={Globals.COLOR.DARKBLUE} FontPaddingVertical={5}
                                           FontPaddingHorizontal={20} FontTextAlign={'center'}/>
 
-                            <TextViewRegular
+                            <View style={{paddingHorizontal: 10}}>
+                                <Paragraph>Lorem ipsum is simply dummy text of this app. this is long text to show the
+                                    testing of this text only, bla bla is not the library only text writtern in tis boo
+                                    and the lol waht is this no api is calling in this app sample app only and the
+                                    sample text it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                    Lorem ipsum is simply dummy text of this app. this is long text to show the testing
+                                    of this text only, bla bla is not the library only text writtern in tis boo and the
+                                    lol waht is this no api is calling in this app sample app only and the sample text
+                                    it is. Lorem ipsum is simply dummy text of this app,
+                                </Paragraph>
+                            </View>
+
+                            {/*<TextViewRegular
                                 value={'Lorem ipsum is simply dummy text of this app. this is long text to show the testing of this text only, bla bla is not the library only text writtern in tis boo and the lol waht is this no api is calling in this app sample app only and the sample text it is. Lorem ipsum is simply dummy text of this app, ' +
                                 'Lorem ipsum is simply dummy text of this app. this is long text to show the testing of this text only, bla bla is not the library only text writtern in tis boo and the lol waht is this no api is calling in this app sample app only and the sample text it is. Lorem ipsum is simply dummy text of this app, ' +
                                 'Lorem ipsum is simply dummy text of this app. this is long text to show the testing of this text only, bla bla is not the library only text writtern in tis boo and the lol waht is this no api is calling in this app sample app only and the sample text it is. Lorem ipsum is simply dummy text of this app, ' +
@@ -63,7 +132,7 @@ export default class AboutUs extends React.Component {
                                 'Lorem ipsum is simply dummy text of this app. this is long text to show the testing of this text only, bla bla is not the library only text writtern in tis boo and the lol waht is this no api is calling in this app sample app only and the sample text it is. Lorem ipsum is simply dummy text of this app, '}
                                 FontSize={Globals.TEXT_SIZE.SMALL}
                                 FontColor={Globals.COLOR.GREY} FontPaddingVertical={5}
-                                FontPaddingHorizontal={10} FontTextAlign={'left'} FontTextAlignVertical={'center'}/>
+                                FontPaddingHorizontal={10} FontTextAlign={'left'} FontTextAlignVertical={'center'}/>*/}
 
                         </View>
 
