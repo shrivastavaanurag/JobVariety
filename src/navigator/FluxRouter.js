@@ -16,6 +16,8 @@ import AboutUs from "../screens/AboutUs";
 import Settings from "../screens/Settings";
 import PostTask1 from "../screens/postTask/PostTask1";
 import PostTask2 from "../screens/postTask/PostTask2";
+import PostTask3 from "../screens/postTask/PostTask3";
+import PostTask4 from "../screens/postTask/PostTask4";
 
 var alerts = require('../constants/alertFunction');
 
@@ -103,7 +105,7 @@ export default class FluxRouter extends Component<Props> {
                     >
                         <Scene key='root' hideNavBar panHandlers={null}>
 
-                            <Scene key="browsTask" title="Browse Task" component={BrowsTask} hideNavBar/>
+                            <Scene initial key="browsTask" title="Browse Task" component={BrowsTask} hideNavBar/>
                             <Scene key="jobDetails" title="Job Details" component={JobDetails} hideNavBar/>
                             <Scene key="makeOffer1" title="Make Your Offers" component={MakeOffer1} hideNavBar/>
                             <Scene key="makeOffer2" title="Make Your Offers" component={MakeOffer2}/>
@@ -112,7 +114,9 @@ export default class FluxRouter extends Component<Props> {
                             <Scene key="aboutus" title="About Us" component={AboutUs}/>
                             <Scene key="settings" title="Settings" component={Settings}/>
                             <Scene key="postTask1" title="Post Task" component={PostTask1}/>
-                            <Scene initial key="postTask2" title="Post Task" component={PostTask2}/>
+                            <Scene key="postTask2" title="Post Task" component={PostTask2}/>
+                            <Scene key="postTask3" title="Post Task" component={PostTask3}/>
+                            <Scene key="postTask4" component={PostTask4}/>
                         </Scene>
 
                     </Drawer>

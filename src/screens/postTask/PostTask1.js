@@ -14,8 +14,7 @@ import TextViewBold from "../../components/customTextViews/TextViewBold";
 export default class PostTask1 extends React.Component {
 
     onNextClick = () => {
-        // Actions.postTask2();
-        alert('next screen of post task is in working');
+        Actions.postTask2();
     };
 
 
