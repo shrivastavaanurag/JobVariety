@@ -63,7 +63,7 @@ export default class LoginForm extends Component {
     };
 
     _forgotPasswordClicked = () => {
-        alert('FP clicked');
+        Actions.forgotPassword();
     };
 
     _DontHaveAccount = () => {

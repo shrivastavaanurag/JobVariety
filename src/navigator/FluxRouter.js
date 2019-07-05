@@ -8,6 +8,7 @@ import JobDetails from "../screens/JobDetails";
 import NavigationDrawer from "../components/NavigationDrawer";
 import MenuIcon from '../images/menuIcon.png';
 import {widthPercentageToDP} from "../utils/responsive";
+import ForgotPassword from "../screens/ForgotPassword";
 
 var alerts = require('../constants/alertFunction');
 
@@ -84,6 +85,7 @@ export default class FluxRouter extends Component<Props> {
                 <Stack key="root" initial={true}>
                     <Scene key="login" component={Login} title="Login" hideNavBar initial={true}/>
                     <Scene key="register" component={SignUp} title="Register" hideNavBar/>
+                    <Scene key="forgotPassword" component={ForgotPassword} title="ForgotPassword" hideNavBar/>
 
                     <Drawer
                         hideNavBar
