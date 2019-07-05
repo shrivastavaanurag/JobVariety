@@ -29,15 +29,15 @@ export default class BrowseTaskDate extends React.Component {
                         <View style={styles.MainContainer}>
 
                             <CardView
-                                cardElevation={2}
+                                cardElevation={5}
                                 cardMaxElevation={2}
-                                cornerRadius={20}
+                                cornerRadius={15}
                                 style={styles.cardViewStyle}>
 
                                 <View style={{
                                     flexDirection: 'row',
                                     flex: 1,
-                                    width: '100%',
+                                    width: '100%', paddingBottom: 10, paddingRight: 10,
                                     justifyContent: 'center',
                                     alignItems: 'space-around',
                                 }}>
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
         flex: 1, padding: 10, justifyContent: 'center', alignItems: 'center'
     },
     cardViewStyle: {
-        backgroundColor: '#fefefe',
-        padding: 10, margin: 5,
+        backgroundColor: '#FCFEFE',
+        padding: 10,
         width: widthPercentageToDP('95%'),
     },
     image: {
