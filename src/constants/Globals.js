@@ -31,6 +31,7 @@ export default {
         LOGIN: 'LOGIN',
         USERNAME: 'USERNAME',
         PASSWORD: 'PASSWORD',
+        FORGOT_PASSWORD: 'FORGOT PASSWORD'
     },
 
     TEXT_SIZE: {
