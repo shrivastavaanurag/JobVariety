@@ -8,6 +8,7 @@ import JobDetails from "../screens/JobDetails";
 import NavigationDrawer from "../components/NavigationDrawer";
 import MenuIcon from '../images/menuIcon.png';
 import {widthPercentageToDP} from "../utils/responsive";
+import ForgotPassword from "../screens/ForgotPassword";
 import MakeOffer1 from "../screens/makeOffers/MakeOffer1";
 import MakeOffer2 from "../screens/makeOffers/MakeOffer2";
 import PreviewOffer from "../screens/makeOffers/PreviewOffer";
@@ -94,6 +95,7 @@ export default class FluxRouter extends Component<Props> {
                 <Stack key="root" initial={true}>
                     <Scene key="login" component={Login} title="Login" hideNavBar initial={true}/>
                     <Scene key="register" component={SignUp} title="Register" hideNavBar/>
+                    <Scene key="forgotPassword" component={ForgotPassword} title="ForgotPassword" hideNavBar/>
 
                     <Drawer
                         hideNavBar
