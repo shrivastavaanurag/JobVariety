@@ -1,4 +1,5 @@
 import image from '../images/usr1.png';
+import girl from '../images/girl_pic.png';
 
 export default {
     InPersonData: [
@@ -73,6 +74,33 @@ export default {
             "offers": "5 offers",
             "price": "$890",
             "image": image
+        }
+    ],
+
+    JobDetailsDummyData: [
+        {
+            "name": "Maria Angelica R",
+            "id": 1,
+            "offers": "10",
+            "ratings": 3,
+            "comp_rate": "75% completion rate",
+            "image": girl
+        },
+        {
+            "name": "John Doe",
+            "id": 2,
+            "offers": "20",
+            "ratings": 4,
+            "comp_rate": "80% completion rate",
+            "image": girl
+        },
+        {
+            "name": "Smith",
+            "id": 3,
+            "offers": "17",
+            "ratings": 5,
+            "comp_rate": "100% completion rate",
+            "image": girl
         }
     ]
 }
