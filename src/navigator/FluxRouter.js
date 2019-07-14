@@ -21,6 +21,7 @@ import PostTask3 from "../screens/postTask/PostTask3";
 import PostTask4 from "../screens/postTask/PostTask4";
 import Portfolio from "../screens/Portfolio";
 import PaymentMethod from "../screens/PaymentMethod";
+import PublicProfile from "../screens/PublicProfile";
 
 var alerts = require('../constants/alertFunction');
 
@@ -123,6 +124,7 @@ export default class FluxRouter extends Component<Props> {
                             <Scene key="postTask4" component={PostTask4}/>
                             <Scene key="portfolio" title="Portfolio" component={Portfolio}/>
                             <Scene key="paymentMethod" title="Payment Method" component={PaymentMethod}/>
+                            <Scene key="publicProfile" title="Public Profile" component={PublicProfile}/>
                         </Scene>
 
                     </Drawer>

@@ -28,7 +28,8 @@ export default {
         DARKBLUE: '#0F3274',
         LIGHTBLUE: '#6EA8DA',
         DARKGRAY: '#999',
-        THEME_COLOR_BLUE: '#00ADD8'
+        THEME_COLOR_BLUE: '#00ADD8',
+        ORENGE_COLOR: '#DB7D01'
     },
 
     TEXT_VALUES: {

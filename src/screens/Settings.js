@@ -17,7 +17,7 @@ export default class Settings extends React.Component {
     };
 
     _profileSettings = () => {
-        // Actions.previewOffer();
+        Actions.publicProfile({type: ActionConst.REPLACE});
     };
 
     _changePassword = () => {
