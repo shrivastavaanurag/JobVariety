@@ -41,7 +41,7 @@ export default class SignupForm extends Component {
     signUpClicked = () => {
         NetInfo.isConnected.fetch().done((isConnected) => {
             if (isConnected) {
-
+                alert('clicked');
             } else {
                 this.notConnected();
             }
@@ -61,7 +61,7 @@ export default class SignupForm extends Component {
     };
 
     _agreeTermsClicked = () => {
-        alert('FP clicked');
+        alert('t&c clicked');
     };
 
     _AlreadyHaveAccount = () => {

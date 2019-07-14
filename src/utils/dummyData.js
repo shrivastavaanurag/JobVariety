@@ -1,5 +1,6 @@
 import image from '../images/usr1.png';
 import girl from '../images/girl_pic.png';
+import visa from '../images/visa.png';
 
 export default {
     InPersonData: [
@@ -102,5 +103,25 @@ export default {
             "comp_rate": "100% completion rate",
             "image": girl
         }
+    ],
+
+
+    CARD_DATA: [
+        {
+            id: 1,
+            cardNumber: '4211 xxxx xxxx 5483',
+            cardImage: visa,
+            bankName: 'ICICI',
+            cardDate: '06/21',
+            cardName: 'John Doe'
+        },
+        {
+            id: 2,
+            cardNumber: '4111 xxxx xxxx 7892',
+            cardImage: visa,
+            bankName: 'PNB',
+            cardDate: '07/24',
+            cardName: 'Maria Sharapova'
+        },
     ]
 }

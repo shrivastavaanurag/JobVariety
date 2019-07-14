@@ -3,6 +3,8 @@ package com.jobvariety;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage; // Import package
 import com.kishanjvaghela.cardview.RNCardViewPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
@@ -32,7 +34,9 @@ public class MainApplication extends Application implements ReactApplication {
             new SplashScreenReactPackage(),
             new ReanimatedPackage(),
             new VectorIconsPackage(),
-            new RNGestureHandlerPackage()
+            new RNGestureHandlerPackage(),
+            new ImagePickerPackage(),
+            new DocumentPickerPackage()
       );
     }
 

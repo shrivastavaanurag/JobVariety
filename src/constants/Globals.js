@@ -12,6 +12,12 @@ export default {
 
     END_POINT_URL: {},
 
+    CREDIT_CARD_ISSUER: {
+        VISA_MASTER: 'visa-or-mastercard',
+        AMEX: 'amex',
+        DINNERS_CLUB: 'diners',
+    },
+
     COLOR: {
         BLACK: '#000000',
         WHITE: '#ffffff',
@@ -51,7 +57,9 @@ export default {
 
     HEADINGS: {},
 
-    MESSAGE: {},
+    MESSAGE: {
+        BILLING_ADDRESS: 'Your billing address will be verified before you can receive payments.'
+    },
 
     ERRORS: {}
 

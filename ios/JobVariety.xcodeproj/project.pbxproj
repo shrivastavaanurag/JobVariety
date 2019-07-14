@@ -48,6 +48,8 @@
 		66ABDA308CEA4FAAA961A345 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE92B1156E3042AE9CE653C2 /* Foundation.ttf */; };
 		6B8F8031FA6C407183DAC9A0 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D98565B83254F15B4AFE911 /* Zocial.ttf */; };
 		6F754A2762FE4E559D036F18 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A463AAA5EE7D40AA8DA44DD4 /* FontAwesome.ttf */; };
+		7557BA8C22D9BF5900F68FCB /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557BA8622D9BF4400F68FCB /* libRNImagePicker.a */; };
+		7557BA9322D9C5D800F68FCB /* libRNDocumentPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557BA9222D9C5AF00F68FCB /* libRNDocumentPicker.a */; };
 		75A794C822BE670B00FE3E07 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A794C522BE66C000FE3E07 /* libRNVectorIcons.a */; };
 		75A7958522BF6D7000FE3E07 /* libRNReanimated.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A7958222BF6D5C00FE3E07 /* libRNReanimated.a */; };
 		75FAF5F322C1390900C2D168 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FAF5F222C138EE00C2D168 /* libSplashScreen.a */; };
@@ -295,6 +297,20 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
+		7557BA8522D9BF4400F68FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7557BA5922D9BF4400F68FCB /* RNImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
+			remoteInfo = RNImagePicker;
+		};
+		7557BA9122D9C5AF00F68FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7557BA8D22D9C5AF00F68FCB /* RNDocumentPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E01DD9DB1D2311A600C39062;
+			remoteInfo = RNDocumentPicker;
+		};
 		75A794C422BE66C000FE3E07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75A7949822BE66C000FE3E07 /* RNVectorIcons.xcodeproj */;
@@ -443,6 +459,8 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		61FB6064129D46FDB9E8BEFD /* RNCardView.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCardView.xcodeproj; path = "../node_modules/react-native-cardview/ios/RNCardView.xcodeproj"; sourceTree = "<group>"; };
 		71D5E411ED374AF183E1B7CD /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		7557BA5922D9BF4400F68FCB /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		7557BA8D22D9C5AF00F68FCB /* RNDocumentPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDocumentPicker.xcodeproj; path = "../node_modules/react-native-document-picker/ios/RNDocumentPicker.xcodeproj"; sourceTree = "<group>"; };
 		756F8471FE446232B490B982 /* Pods-JobVariety-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobVariety-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JobVariety-tvOS/Pods-JobVariety-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		75A7949822BE66C000FE3E07 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		75A7957C22BF6D5C00FE3E07 /* RNReanimated.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNReanimated.xcodeproj; path = "../node_modules/react-native-reanimated/ios/RNReanimated.xcodeproj"; sourceTree = "<group>"; };
@@ -486,6 +504,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7557BA9322D9C5D800F68FCB /* libRNDocumentPicker.a in Frameworks */,
+				7557BA8C22D9BF5900F68FCB /* libRNImagePicker.a in Frameworks */,
 				75FAF5F322C1390900C2D168 /* libSplashScreen.a in Frameworks */,
 				75A7958522BF6D7000FE3E07 /* libRNReanimated.a in Frameworks */,
 				75A794C822BE670B00FE3E07 /* libRNVectorIcons.a in Frameworks */,
@@ -718,6 +738,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7557BA5A22D9BF4400F68FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7557BA8622D9BF4400F68FCB /* libRNImagePicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7557BA8E22D9C5AF00F68FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7557BA9222D9C5AF00F68FCB /* libRNDocumentPicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		75A7949922BE66C000FE3E07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +819,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7557BA8D22D9C5AF00F68FCB /* RNDocumentPicker.xcodeproj */,
+				7557BA5922D9BF4400F68FCB /* RNImagePicker.xcodeproj */,
 				75FAF5C222C138EE00C2D168 /* SplashScreen.xcodeproj */,
 				75A7957C22BF6D5C00FE3E07 /* RNReanimated.xcodeproj */,
 				75A7949822BE66C000FE3E07 /* RNVectorIcons.xcodeproj */,
@@ -1019,8 +1057,16 @@
 					ProjectRef = 61FB6064129D46FDB9E8BEFD /* RNCardView.xcodeproj */;
 				},
 				{
+					ProductGroup = 7557BA8E22D9C5AF00F68FCB /* Products */;
+					ProjectRef = 7557BA8D22D9C5AF00F68FCB /* RNDocumentPicker.xcodeproj */;
+				},
+				{
 					ProductGroup = 75DB56EE22BE3CE60022E05F /* Products */;
 					ProjectRef = 88D07A00DE47400598242B09 /* RNGestureHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = 7557BA5A22D9BF4400F68FCB /* Products */;
+					ProjectRef = 7557BA5922D9BF4400F68FCB /* RNImagePicker.xcodeproj */;
 				},
 				{
 					ProductGroup = 75A7957D22BF6D5C00FE3E07 /* Products */;
@@ -1254,6 +1300,20 @@
 			fileType = archive.ar;
 			path = libRCTAnimation.a;
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7557BA8622D9BF4400F68FCB /* libRNImagePicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNImagePicker.a;
+			remoteRef = 7557BA8522D9BF4400F68FCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7557BA9222D9C5AF00F68FCB /* libRNDocumentPicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNDocumentPicker.a;
+			remoteRef = 7557BA9122D9C5AF00F68FCB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		75A794C522BE66C000FE3E07 /* libRNVectorIcons.a */ = {
@@ -1614,12 +1674,7 @@
 				INFOPLIST_FILE = JobVarietyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1644,12 +1699,7 @@
 				INFOPLIST_FILE = JobVarietyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1735,12 +1785,7 @@
 				);
 				INFOPLIST_FILE = "JobVariety-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1773,12 +1818,7 @@
 				);
 				INFOPLIST_FILE = "JobVariety-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1810,12 +1850,7 @@
 				);
 				INFOPLIST_FILE = "JobVariety-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1847,12 +1882,7 @@
 				);
 				INFOPLIST_FILE = "JobVariety-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",

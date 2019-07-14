@@ -76,6 +76,14 @@ export default class NavigationDrawer extends Component {
                 Actions.postTask1({type: ActionConst.REPLACE});
                 Actions.drawerClose();
                 break;
+            case 'Payment Method':
+                Actions.paymentMethod({type: ActionConst.REPLACE});
+                Actions.drawerClose();
+                break;
+            case 'Portfolio':
+                Actions.portfolio({type: ActionConst.REPLACE});
+                Actions.drawerClose();
+                break;
         }
     };
 

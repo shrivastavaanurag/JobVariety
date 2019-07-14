@@ -20,6 +20,9 @@ export default {
             name: 'Payment Method'
         },
         {
+            name: 'Portfolio'
+        },
+        {
             name: 'Settings'
         },
         {
